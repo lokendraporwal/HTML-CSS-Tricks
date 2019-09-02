@@ -1,0 +1,40 @@
+body{
+	background: #333;
+	font-family: 'poppins',sans-serif;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.hover-button{
+	border-radius:2rem;
+	backround-color: transparent;
+	font-size: 2rem;
+	text-transform: uppercase;
+	padding: 0.5rem 5rem;
+	overflow: hidden;
+	position: relative;
+	color: white;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+}
+.hover-button:hover:before{
+	margin-left: 0;
+}
+.hover-button span{
+	position: relative;
+	z-index: 1;
+}
+.hover-button:before{
+	content: '';
+	height: 100%;
+	width: 200%;
+	margin-left: -100%;
+	position: absolute;
+	top:0;left:0;right:0;bottom:0;
+	z-index:0;
+	background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59, #c471ed, #12c2e9);
+	filter:contrast(150%);
+	transition: 0.3s;
+}
